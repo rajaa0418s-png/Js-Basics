@@ -1,0 +1,1 @@
+fetch('data/blog.json').then(r=>r.json()).then(posts=>{document.getElementById('blog-list').innerHTML=posts.map(p=>`<article class='card'><h3>${p.title}</h3><p>${p.excerpt}</p><a class='btn' href='post.html?slug=${p.slug}'>Read more</a></article>`).join('')})
